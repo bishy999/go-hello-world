@@ -1,6 +1,6 @@
 # pull and run image
 ```
-sudo docker run --name=my-running-webapp -d -p 8080:80 bishy999/golang:1.1-my-webapp
+sudo docker run --name=my-running-webapp -d -p 8080:80 bishy999/golang:1.4-my-webapp
 ```
 
 
@@ -12,9 +12,9 @@ curl http://localhost:8080
 ```
 
 
-#############################################################################################
-#                  Steps to build and deploy simple golang webapp with docker               #
-#############################################################################################
+##########################################################################################
+#                  Steps to build and deploy simple golang webapp with docker            #
+##########################################################################################
 
 
 Note: this is automatically done via travis (see .travis.yml) but manual steps are listed here for reference
@@ -48,7 +48,7 @@ sudo docker tag <image ID>  <docker hub username>/<repository><image name>:<vers
 
 e.g.
 
-sudo docker tag my-webapp bishy999/golang:1.1-my-webapp
+sudo docker tag my-webapp bishy999/golang:1.4-my-webapp
 ```
 
 
@@ -66,7 +66,7 @@ docker push <docker hub username>/<repository><image name>
 
 e.g. on Mac
 
-sudo docker push bishy999/golang:1.1-my-webapp
+sudo docker push bishy999/golang:1.4-my-webapp
 ```
 
 
