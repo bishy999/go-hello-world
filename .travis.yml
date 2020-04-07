@@ -1,0 +1,16 @@
+dist: trusty
+
+language: go
+
+go:
+  - 1.14
+
+jobs:
+  include:
+    - stage: build docker image
+      script:
+      - echo "$DOCKER_PASSWORD" | docker login -u "$DOCKER_USERNAME" --password-stdin
+      - docker build -t my-webapp .
+      - docker images
+      - docker tag my-webapp $DOCKER_USERNAME/golang:1.${TRAVIS_BUILD_NUMBER}-my-webapp
+      - docker push $DOCKER_USERNAME/golang:1.${TRAVIS_BUILD_NUMBER}-my-webapp
