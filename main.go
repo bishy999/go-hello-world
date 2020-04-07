@@ -1,15 +1,24 @@
 package main
 
 import (
-	"io"
+	"html/template"
 	"net/http"
 )
 
-func main() {
-	http.HandleFunc("/", index)
-	http.ListenAndServe(":80", nil)
+var tpl *template.Template
+
+const msg string = "hello world from my simple golang webapp running on a docker container"
+
+func init() {
+	tpl = template.Must(template.ParseGlob("templates/*"))
 }
 
-func index(w http.ResponseWriter, r *http.Request) {
-	io.WriteString(w, "hello from my golang webapp running on a docker container")
+func main() {
+	http.HandleFunc("/", index)
+	http.Handle("/favicon.ico", http.NotFoundHandler())
+	http.ListenAndServe(":8080", nil)
+}
+
+func index(w http.ResponseWriter, req *http.Request) {
+	tpl.ExecuteTemplate(w, "index.gohtml", msg)
 }
