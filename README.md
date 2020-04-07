@@ -1,13 +1,6 @@
-
-# check docker hub
-
-```
-image used in example here is stored on docker hub e.g https://hub.docker.com/r/bishy999/golang
-```
-
 # pull and run image
 ```
-sudo docker run --name=my-running-webapp -d -p 8080:80 bishy999/golang:1.0-my-webapp
+sudo docker run --name=my-running-webapp -d -p 8080:80 bishy999/golang:1.1-my-webapp
 ```
 
 
@@ -55,7 +48,7 @@ sudo docker tag <image ID>  <docker hub username>/<repository><image name>:<vers
 
 e.g.
 
-sudo docker tag my-webapp bishy999/golang:1.0-my-webapp
+sudo docker tag my-webapp bishy999/golang:1.1-my-webapp
 ```
 
 
@@ -73,5 +66,12 @@ docker push <docker hub username>/<repository><image name>
 
 e.g. on Mac
 
-sudo docker push bishy999/golang:1.0-my-webapp
+sudo docker push bishy999/golang:1.1-my-webapp
+```
+
+
+# check docker hub
+
+```
+image used in example here is stored on docker hub e.g https://hub.docker.com/r/bishy999/golang
 ```
