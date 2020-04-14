@@ -1,3 +1,13 @@
+
+## Status
+[![Build Status](https://travis-ci.com/bishy999/go-hello-world.svg?branch=master)](https://travis-ci.com/bishy999/go-hello-world)
+[![Go Report Card](https://goreportcard.com/badge/github.com/bishy999/go-hello-world)](https://goreportcard.com/report/github.com/bishy999/go-hello-world)
+![GitHub Repo size](https://img.shields.io/github/repo-size/bishy999/go-hello-world)
+[![GitHub Tag](https://img.shields.io/github/tag/bishy999/go-hello-world.svg)](https://github.com/bishy999/go-hello-world/releases/latest)
+[![GitHub Activity](https://img.shields.io/github/commit-activity/m/bishy999/go-hello-world)](https://github.com/bishy999/go-hello-world)
+[![GitHub Contributors](https://img.shields.io/github/contributors/bishy999/go-hello-world)](https://github.com/bishy999/go-hello-world)
+
+
 # pull and run image
 ```
 sudo docker run --name=my-running-webapp -d -p 8080:80 bishy999/golang:1.5-my-webapp
