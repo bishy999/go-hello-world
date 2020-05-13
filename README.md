@@ -10,7 +10,7 @@
 
 # pull and run image
 ```
-sudo docker run --name=my-running-webapp -d -p 8080:80 bishy999/golang:1.5-my-webapp
+sudo docker run --name=my-running-webapp -d -p 8080:8080 bishy999/golang:1.8-my-webapp
 ```
 
 
@@ -47,7 +47,8 @@ sudo docker images
 # create a container from your image and run it
  
 ```
-sudo docker run --name=my-running-webapp -d -p 8080:80 my-webapp
+sudo docker run --name=my-running-webapp -d -p 8080:8080 my-webapp
+
 ```
 
 
@@ -58,7 +59,7 @@ sudo docker tag <image ID>  <docker hub username>/<repository><image name>:<vers
 
 e.g.
 
-sudo docker tag my-webapp bishy999/golang:1.5-my-webapp
+sudo docker tag my-webapp bishy999/golang:1.8-my-webapp
 ```
 
 
