@@ -12,7 +12,7 @@ var tpl *template.Template
 const msg string = "hello world from my simple golang webapp running on a docker container"
 
 type response struct {
-	Status   string
+	Status  string
 	Message string
 	Lyrics  []string
 }
